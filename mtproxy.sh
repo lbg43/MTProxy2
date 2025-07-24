@@ -56,7 +56,7 @@ download_file(){
 
 configure_mtg(){
     echo -e "Configuring mtg..."
-    wget -N --no-check-certificate -O /etc/mtg.toml https://raw.githubusercontent.com/missuo/MTProxy/main/mtg.toml
+    wget -N --no-check-certificate -O /etc/mtg.toml https://raw.githubusercontent.com/lbg43/MTProxy2/main/mtg.toml
     
     echo ""
     read -p "Please enter a spoofed domain (default itunes.apple.com): " domain
@@ -78,7 +78,7 @@ configure_mtg(){
 
 configure_systemctl(){
     echo -e "Configuring systemctl..."
-    wget -N --no-check-certificate -O /etc/systemd/system/mtg.service https://raw.githubusercontent.com/missuo/MTProxy/main/mtg.service
+    wget -N --no-check-certificate -O /etc/systemd/system/mtg.service https://raw.githubusercontent.com/lbg43/MTProxy2/main/mtg.service
     systemctl enable mtg
     systemctl start mtg
     echo "mtg configured successfully, start to configure firewall..."
@@ -127,7 +127,7 @@ update_mtg(){
 start_menu() {
     clear
     echo -e "  MTProxy v2 One-Click Installation
----- by Vincent | github.com/missuo/MTProxy ----
+---- by Vincent | github.com/lbg43/MTProxy2 ----
  ${green} 1.${plain} Install MTProxy
  ${green} 2.${plain} Uninstall MTProxy
 ————————————
